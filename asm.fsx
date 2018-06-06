@@ -2,7 +2,7 @@ open System
 open System.Text.RegularExpressions
 open System.IO open System.Diagnostics
 open System.Text.RegularExpressions
-let searchPath = Environment.ExpandEnvironmentVariables "%USERPROFILE%\\nuget"
+let searchPath = Environment.ExpandEnvironmentVariables @"%USERPROFILE%\nuget"
 let scripts = Directory.EnumerateFiles(searchPath, "*.fsx", SearchOption.AllDirectories)
 let asm =
     Directory.EnumerateDirectories(searchPath, "*lib*", SearchOption.AllDirectories)
